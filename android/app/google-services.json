@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "46434512093",
+    "firebase_url": "https://motiv-24be2.firebaseio.com",
+    "project_id": "motiv-24be2",
+    "storage_bucket": "motiv-24be2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:46434512093:android:f2041eec1b53296fd0ff34",
+        "android_client_info": {
+          "package_name": "com.carocode.quotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "46434512093-onek5fpc9mrm73omn93uld7uclmnghk7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIaX8_wQcwCWo4RTt4BKn283NMAII1fWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "46434512093-onek5fpc9mrm73omn93uld7uclmnghk7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
