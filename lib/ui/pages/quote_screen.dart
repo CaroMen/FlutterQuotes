@@ -12,26 +12,29 @@ class QuoteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     ScreenUtil.init(context, width: 350, height: 660);
     return Scaffold(
-      body: StreamBuilder(
-        stream: _firestore.collection('stories').snapshots(),
-        builder: (context, snapshot) {
-          if (!snapshot.hasData) return _LoadingIndicator();
-          return PageView.builder(
-            itemCount: snapshot.data.documents.length,
-            itemBuilder: (context, index) {
-              final document = snapshot.data.documents[index];
-              return QuoteWidget(
-                backgroundColor: _randomColor.randomColor(
-                    colorBrightness: ColorBrightness.dark),
-                quote: document['quote'],
-                author: document['author'],
-              );
-            },
-            controller: PageController(
-              viewportFraction: 0.8,
-            ),
-          );
-        },
+      body: ClipRRect(
+        borderRadius: BorderRadius.circular(15.0),
+        child: StreamBuilder(
+          stream: _firestore.collection('stories').snapshots(),
+          builder: (context, snapshot) {
+            if (!snapshot.hasData) return _LoadingIndicator();
+            return PageView.builder(
+              itemCount: snapshot.data.documents.length,
+              itemBuilder: (context, index) {
+                final document = snapshot.data.documents[index];
+                return QuoteWidget(
+                  backgroundColor: _randomColor.randomColor(
+                      colorBrightness: ColorBrightness.dark),
+                  quote: document['quote'],
+                  author: document['author'],
+                );
+              },
+              controller: PageController(
+                viewportFraction: 0.8,
+              ),
+            );
+          },
+        ),
       ),
     );
   }
